@@ -1,6 +1,39 @@
 #!/usr/bin/env python3
 
-# OBJECT ORIENTED PROGRAMING WITH PYTHON ---------------------------------------------------------
+# A personal demo ----------------- 
+
+"""
+Suppose I have a database table [users]: with the following columns/fields: [id,name,email,phone]
+Now I want to write a class in its regard
+"""
+class Users:
+    """a class that represents a database table with its column/fields"""
+    def __init__(user, id, name, email, phone):
+        user.id = id
+        user.name = name
+        user.email = email
+        user.phone = phone
+    
+    def __str__(user):
+        # return f"Contact(name={user.name})"
+        return f"{user.name}"
+
+x = Users(1, "Bobby", "b@g.com", 803)
+print(x)
+
+# ---------------------------------------------
+class ClassA:
+    """class description here..."""
+    username = "bobbyabuchi"
+
+    def f(self):
+        return "Hello Word!"
+
+x = ClassA()
+print(x)
+# ---------------------------------------------
+
+# OBJECT ORIENTED PROGRAMING WITH PYTHON [COURSERA] ---------------------------------------------------------
 
 # Classes and Inheritance (Week 1) ----------------------------------------------------------------------------
 
@@ -1926,6 +1959,8 @@ class BMI:
 student1 = BMI(70, 76)
 print(student1.BMI_Value())
 
+# FROM JIMSHAPEDCODING
+
 # Constructor __init___ ----------------------------------------------------------------------
 
 class Item:
@@ -1948,6 +1983,56 @@ item2 = Item("Laptop", 1000, 3)
 print(item1.calculate_total_price())
 print(item2.calculate_total_price())
 
+# Class vs Static Methods --------------------------------------------------------------------
 
+import csv
 
+class Item:
+    pay_rate = 0.8 # The pay rate after 20% discount
+    all = []
+    def __init__(self, name: str, price: float, quantity=0):
+        # Run validations to the received arguments
+        assert price >= 0, f"Price {price} is not greater than or equal to zero!"
+        assert quantity >= 0, f"Quantity {quantity} is not greater or equal to zero!"
 
+        # Assign to self object
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+
+        # Actions to execute
+        Item.all.append(self)
+
+    def calculate_total_price(self):
+        return self.price * self.quantity
+
+    def apply_discount(self):
+        self.price = self.price * self.pay_rate
+
+    @classmethod
+    def instantiate_from_csv(cls):
+        with open('otherfiles/items.csv', 'r') as f:
+            reader = csv.DictReader(f)
+            items = list(reader)
+
+        for item in items:
+            Item(
+                name=item.get('name'),
+                price=float(item.get('price')),
+                quantity=int(item.get('quantity')),
+            )
+
+    @staticmethod
+    def is_integer(num):
+        # We will count out the floats that are point zero
+        # For i.e: 5.0, 10.0
+        if isinstance(num, float):
+            # Count out the floats that are point zero
+            return num.is_integer()
+        elif isinstance(num, int):
+            return True
+        else:
+            return False
+
+    def __repr__(self):
+        return f"Item('{self.name}', {self.price}, {self.quantity})"
