@@ -2123,45 +2123,66 @@ print(sorted_ids)
 # September 2023
 
 """
-Introduction to Functions ----------------------------------------------------------------------------------------------------------------------
+Introduction to Functions ---------------------------------------------------------------------------------------------------------------------------------
+"""
+
+import math
+
+def volume_of_circle(radius):
+    """Calculates and returns the volume of a circle with a given radius"""
+    v = (4.0/3.0) * math.pi * radius ** 3
+    return v
+
+sun = volume_of_circle(693340000)
+earth = volume_of_circle(6371000)
+moon = volume_of_circle(1737.4000)
+
+print('The volume of the sun is', sun)
+print('The volume of the earth is', earth)
+print('The volume of the moon is', moon)
+
+# WITH THE HELP() YOU CAN SEE A DOCUMENTATION OF WHAT A FUNCTION DOES 
+
+help(volume_of_circle)
+help(print) 
+
+# you can assign default values to function definition like this
+def ml_to_cm(ml = 0, cl = 0):
+    """converts mililitres to centilitres """
+    pass
+
+# an there are default and non default argumenrs you have to list the non-default arguments first in this orfer
+def functionName1(x, y, z = 0):
+    pass
+
+# dir() shows you what's obtainable in a function or method
+# help() shows you how to use the functions or method
+
+# void function - this executes, terminates and does not return any value 
+# value returning function - executes and returns a value before terminating
+
+#* Local Variables
+# a local variable scope is the function in which the variable is created
+
+#* Writing Your Own Value-Returning Functions
+def getUsername():
+    username = input('Enter username: ')
+    return username
+
+def showUsername():
+    x = getUsername()
+    print(x)
+
+getUsername()
+
+"""
+The math Module -------------------------------------------------------------------------------------------------------------------------------------------
 """
 
 """
-Defining and Calling a Void Function ----------------------------------------------------------------------------------------------------------------------
+Storing Functions in Modules ------------------------------------------------------------------------------------------------------------------------------
 """
 
 """
-Designing a Program to Use Functions ----------------------------------------------------------------------------------------------------------------------
-"""
-
-"""
-Local Variables ----------------------------------------------------------------------------------------------------------------------
-"""
-
-"""
-Passing Arguments to Functions ----------------------------------------------------------------------------------------------------------------------
-"""
-
-"""
-Global Variables and Global Constants ----------------------------------------------------------------------------------------------------------------------
-"""
-
-"""
-Introduction to Value-Returning Functions: Generating Random Numbers -----------------------------------------------------------------------------------------
-"""
-
-"""
-Writing Your Own Value-Returning Functions ----------------------------------------------------------------------------------------------------------------------
-"""
-
-"""
-The math Module ----------------------------------------------------------------------------------------------------------------------
-"""
-
-"""
-Storing Functions in Modules ----------------------------------------------------------------------------------------------------------------------
-"""
-
-"""
-Turtle Graphics: Modularizing Code with Functions -----------------------------------------------------------------------------------------------------------
+Turtle Graphics: Modularizing Code with Functions ---------------------------------------------------------------------------------------------------------
 """
