@@ -2175,14 +2175,39 @@ def showUsername():
 
 getUsername()
 
-"""
-The math Module -------------------------------------------------------------------------------------------------------------------------------------------
-"""
+#* Returning multiple values
+def getUser():
+    username = input('Username: ')
+    email = input('Email: ')
+    return username, email
+
+# you need to use the two variables that will be returned to call the function
+username, email = getUser()
 
 """
 Storing Functions in Modules ------------------------------------------------------------------------------------------------------------------------------
 """
+#* still on functions, demo on Python Modules
+# when you import a module(file that contains python code, like PHP include/require), Python will look into the same folder
+#  and other places for the file like in this case geometry.py, circle.py and rectangle.py
+import geometry     #TODO
+import circle       #TODO
+import rectangle    #TODO
+# so to access the functions involved: moduleName.functionName() and it will be hit
 
 """
-Turtle Graphics: Modularizing Code with Functions ---------------------------------------------------------------------------------------------------------
+FILES AND EXCEPTIONS ------------------------------------------------------------------------------------------------------------
 """
+#TODO Introduction to File Input and Output ==================================================================================
+# filename open(documents.extension, mode) modes include read(r), write(w), append(a)
+# append will add to the end of the file while write will wipe existing records and write the new one
+
+test_file = open(r'/otherfiles/document.txt', 'w') # the r in the code means raw string, Python interpreter can read backslashes
+
+
+#TODO Using Loops to Process Files ===========================================================================================
+
+#TODO Processing Records =====================================================================================================
+
+#TODO Exceptions =============================================================================================================
+
