@@ -85,5 +85,15 @@ print(pizza_and_prices,"\n")
 print(priciest_pizza,cheapest_pizza,"\n")
 print(three_cheapest,"\n")
 
+# 13.07.2024
 
+promise = "I will finish the python loops module!"
+
+# to use range function with for loop, you can either 
+
+for x in range(0,5):
+  print(promise)
+# or simply...
+for x in range(5):
+  print(promise)
 
