@@ -97,3 +97,80 @@ for x in range(0,5):
 for x in range(5):
   print(promise)
 
+# use while loop to print the elements of a list 
+python_topics = ["variables", "control flow", "loops", "modules", "classes"]
+
+#Your code below: 
+length = len(python_topics)
+index = 0
+
+while index < length:
+  print("I am learning about",python_topics[index])
+  index += 1
+
+# use break statement to stop a loop when condition is met
+dog_breeds_available_for_adoption = ["french_bulldog", "dalmatian", "shihtzu", "poodle", "collie"]
+dog_breed_I_want = "dalmatian"
+
+for dog_breed in dog_breeds_available_for_adoption:
+  print(dog_breed)
+  if dog_breed == dog_breed_I_want:
+    print("They have the dog I want!")
+    break
+
+# nested loops
+sales_data = [[12, 17, 22], [2, 10, 3], [5, 12, 13]]
+
+scoops_sold = 0
+
+for location in sales_data:
+  print(location)
+  for x in location:
+    scoops_sold += x
+print(scoops_sold)
+
+# list comprehension
+# syntax: new_list = [<expression> for <element> in <collection>]
+
+grades = [90, 88, 62, 76, 74, 89, 48, 57]
+scaled_grades = [x + 10 for x in grades]
+print(scaled_grades)
+
+# create a new list can_ride_coaster that has every element from heights > 161.
+
+heights = [161, 164, 156, 144, 158, 170, 163, 163, 157]
+can_ride_coaster = [x for x in heights if x > 161]
+print(can_ride_coaster)
+
+# list review
+single_digits = [0,1,2,3,4,5,6,7,8,9]
+squares = []
+for x in single_digits:
+  print(x)
+  # append the squared value of each element of single_digits
+  squares.append(x**2)
+print(squares)
+# element of single_digits taken to the third power
+cubes = [x**3 for x in single_digits]
+print(cubes)
+
+hairstyles = ["bouffant", "pixie", "dreadlocks", "crew", "bowl", "bob", "mohawk", "flattop"]
+
+prices = [30, 25, 40, 20, 20, 35, 50, 35]
+
+last_week = [2, 3, 5, 8, 4, 4, 6, 2]
+
+# sum the price list method 1
+total_price = sum(prices)
+print(total_price)
+# sum up price list method 2
+tp = 0
+for x in prices:
+  tp += x
+print(tp)
+# get avg price
+average_price = total_price/(len(prices))
+print("Average Haircut Price:",average_price)
+# make a list new prices -5
+new_prices = [each_item - 5 for each_item in prices]
+print(new_prices)
