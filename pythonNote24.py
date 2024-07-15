@@ -174,3 +174,17 @@ print("Average Haircut Price:",average_price)
 # make a list new prices -5
 new_prices = [each_item - 5 for each_item in prices]
 print(new_prices)
+
+# ............... 14.07.24........................
+# Import random below:
+import random
+
+# Create random_list of 101 random numbers:
+random_list = [random.randint(1,100) for i in range(101)]
+
+# pick a random number from the random list:
+randomer_number = random.choice(random_list)
+
+# Print randomer_number below:
+print(randomer_number)
+
