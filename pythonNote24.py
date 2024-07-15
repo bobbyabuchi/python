@@ -188,3 +188,25 @@ randomer_number = random.choice(random_list)
 # Print randomer_number below:
 print(randomer_number)
 
+# Object Oriented Python............................ 15.07.24................................. 
+
+# create a class Rules
+class Rules:
+  # define a method(function within a class)
+  def washing_brushes(self): # self by convention
+    # return a value( a string here....)
+    return "Point bristles towards the basin while washing your brushes."
+
+# class method with argument...
+class Circle:
+  pi = 3.14
+  def area(self, radius):
+    # ref a vaiable in the class outside the method -> Classname.variablename
+    return Circle.pi * radius ** 2
+
+# instances of Circle class
+# ref a method -> Classname.method() ... given the diameter 12, 36 and 11460 find area
+circle = Circle()
+pizza_area = circle.area(12/2)
+teaching_table_area = circle.area(36/2)
+round_room_area = circle.area(11460/2)
