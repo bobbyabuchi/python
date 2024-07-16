@@ -210,3 +210,14 @@ circle = Circle()
 pizza_area = circle.area(12/2)
 teaching_table_area = circle.area(36/2)
 round_room_area = circle.area(11460/2)
+
+# ........... 16.07.24............
+class Circle:
+  pi = 3.14
+  # add a constructor
+  def __init__(self, diameter):
+    self.diameter = diameter
+    print(f"New circle with diameter: {self.diameter}")
+
+# Create a circle teaching_table with diameter 36
+teaching_table = Circle(36)    
