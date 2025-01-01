@@ -7,7 +7,7 @@ print(credit[3:]) # omit first three digits
 print(credit[::3]) # last six digits
 print(credit[3::]) # omit first three digits
 
-# shopping cart
+# shopping cart in Euro €
 
 items = []
 total = []
@@ -20,3 +20,14 @@ while True:
         price = float(input(f"Enter price of {item}: "))
         items.append(item)
         total.append(price)
+
+print("------------Your Invoice ----------------")
+
+for item, price in zip(items, total):
+    print(f"[{item}, €{price}]", end="/ ")
+print()
+
+total = sum(total)
+
+print(f"Total due is: €{total}")
+print("------------------------------------")
